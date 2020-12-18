@@ -9,7 +9,9 @@ Original repo here: https://github.com/near/near-sdk-rs/tree/master/examples/fun
 Changes so far:
  1. In `build.sh`, no `flags.sh` exists
 `./build.sh: line 4: ../flags.sh: No such file or directory`
--> Remove flags from `build.sh`.
+-> Move `flags.sh` from parent at
+https://github.com/near/near-sdk-rs/blob/master/examples/flags.sh
+into the repo
 
 2. Replace near_sdk dependencies in toml with:
 ```

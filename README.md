@@ -1,7 +1,10 @@
 # Trying to make Fungible Token work
 The Fungible Token example is currently the best I have to go on for how to
 setup and run a simulation test on NEAR protocol. It needed some work to get up
-and running, and still isn't compiling like it ought. This is my attempt to fix that.
+and running, and still isn't compiling like it ought. This is my attempt to fix
+that.
+
+Original repo here: https://github.com/near/near-sdk-rs/tree/master/examples/fungible-token
 
 Changes so far:
  1. In `build.sh`, no `flags.sh` exists
@@ -28,7 +31,9 @@ impl Default for FungibleToken {
 ```
 
 4. `cargo build` and `build.sh` now run. What about tests?
-`cargo test`
+`cargo test --package fungible-token -- --nocapture`
+(moving that into a `test.sh` file)
+
 ```
 error[E0432]: unresolved import `fungible_token::FungibleTokenContract`
   --> tests/general.rs:10:5
